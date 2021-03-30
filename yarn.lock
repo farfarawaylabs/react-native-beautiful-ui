@@ -1183,6 +1183,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@farfarawaylabs/react-native-easy-flex@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@farfarawaylabs/react-native-easy-flex/-/react-native-easy-flex-1.0.4.tgz#1b1613171019feac3121626771a3cb4b0d5a4217"
+  integrity sha512-3Cy5wW1qok+/uPdNvoMtb2/c6ijXfFd7Z0IxFeDmoHG2350gi9bkxvxnX3deuBsFoDmmFWHzAUtCBnFoQ0oxAw==
+
 "@farfarawaylabs/react-native-hooks@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@farfarawaylabs/react-native-hooks/-/react-native-hooks-0.1.0.tgz#a1814ba157d030609b2b6b8257c04960726faac3"

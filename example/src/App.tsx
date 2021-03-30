@@ -6,13 +6,9 @@ import {
   Text,
   TouchableOpacity,
   FlatList,
+  Image,
 } from 'react-native';
-import {
-  Center,
-  Col,
-  Row,
-  Alignment,
-} from '@farfarawaylabs/react-native-easy-flex';
+import { Center, Col, Row } from '@farfarawaylabs/react-native-easy-flex';
 import { Button } from 'react-native-elements';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -28,12 +24,13 @@ import {
   Typography,
   Screen,
   Spinner,
+  Carousel,
 } from '@farfarawaylabs/react-native-beautiful-ui';
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <ShowScreenWithSpinner />
+      <ShowCarousel />
     </SafeAreaProvider>
   );
 }
@@ -216,5 +213,23 @@ const ShowScreenWithSpinner = () => {
     <Screen name="demo_screen">
       <Spinner size="large" color="pink" />
     </Screen>
+  );
+};
+
+const ShowCarousel = () => {
+  const demoBgImage = require('../demoImages/demoBG.jpg');
+  return (
+    <Center horizontal vertical>
+      <Carousel.Container width={400} height={400}>
+        <Carousel.Slides
+          onSelectedSlideChanged={(selectedSlide) => console.log(selectedSlide)}
+        >
+          <Image source={demoBgImage} />
+          <Image source={demoBgImage} />
+          <Image source={demoBgImage} />
+        </Carousel.Slides>
+        <Carousel.Navigation />
+      </Carousel.Container>
+    </Center>
   );
 };

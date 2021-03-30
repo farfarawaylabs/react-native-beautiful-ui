@@ -9,6 +9,7 @@ import Styles from './styles';
 import Typography from './components/typography/Typography';
 import Screen from './components/general/Screen';
 import Spinner from './components/general/Spinner';
+import Carousel from './components/carousel/Carousel';
 
 export {
   Overlay,
@@ -22,4 +23,5 @@ export {
   Typography,
   Screen,
   Spinner,
+  Carousel,
 };

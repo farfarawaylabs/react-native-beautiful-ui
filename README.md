@@ -12,7 +12,7 @@ You should also install react-native-elements (https://react-native-elements.git
 
 If you plan on using the screen component, you should also install react-native-safe-area-context library (https://github.com/th3rdwave/react-native-safe-area-context) for better safe area handling (recommended anyways).
 
-This package is also using our own Layout package which you can find here: https://github.com/farfarawaylabs/react-native-layout
+This package is also using our own Layout package which you can find here: https://github.com/farfarawaylabs/react-native-easy-flex
 
 ## Example
 
@@ -29,6 +29,7 @@ Under the exampel folder you will find a project you can run on your phone or si
 - [Screen](#screen)
 - [AnimatedListItem](#animatedlistitem)
 - [Typography](#typography)
+- [Carousel](#carousel)
 
 ## Overlay
 
@@ -339,6 +340,61 @@ export default function App() {
         </Col>
       </Row>
     </Screen>
+  );
+}
+```
+
+## Carousel
+
+Use this component to show simple Carousel. Set the width and height to display full screen slideshows or in page carousel style display. The Carousel can take any views (including Image) as slides.
+The Carousel is built using compound component pattern so for example if you don't want to display the navigation dots on the bottom, you can simply emit them or replace them with your own implementation.
+
+### Props of Carousel.Container
+
+- width: The width of the carousel. This will also set the width for each of the child views
+
+- hegiht: The height of the carousel. This will also set the height for each of the child views
+
+- selectedSlide: The index of the slide to show in the Carousel (zero based). Defaults to 0
+
+### Props of Carousel.Slides
+
+- onSelectedSlideChanged: event handler to be called when the selected slide changes
+
+### Props of Caousel.Navigation
+
+- dotColor: The color of a dot represnting a slide. Defaults to '#FFF'
+
+- activeDotColor: The color of the active dot. Defaults to '#232323'
+
+- onDone: Event handler to call when the done button is pressed
+
+- doneButtonTitle: The title of the done button. Defaults to 'Done'
+
+- shouldShowDoneButtonOnAllSlides: Should the done button be showed on all slides or just on the last one. Defaults to false
+
+- doneButton: Provide your own custom done button component
+
+<img width="300" height="600" src="https://github.com/nechmads/demo_images/blob/master/fflabs_react-native-beautiful-ui/Carousel.png?raw=true">
+
+```js
+import React, { useState } from 'react';
+import { Carousel } from '@farfarawaylabs/react-native-beautiful-ui';
+import { Image } from 'react-native';
+
+export default function App() {
+  const demoBgImage = require('../demoImages/demoBG.jpg');
+  return (
+    <Center horizontal vertical>
+      <Carousel.Container width={400} height={400}>
+        <Carousel.Slides>
+          <Image source={demoBgImage} />
+          <Image source={demoBgImage} />
+          <Image source={demoBgImage} />
+        </Carousel.Slides>
+        <Carousel.Navigation />
+      </Carousel.Container>
+    </Center>
   );
 }
 ```

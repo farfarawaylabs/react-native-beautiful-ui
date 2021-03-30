@@ -1,6 +1,6 @@
 {
   "name": "@farfarawaylabs/react-native-beautiful-ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Beautiful controls and pre ready screens for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
+    "@farfarawaylabs/react-native-easy-flex": "^1.0.4",
     "@react-native-community/blur": "^3.6.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
